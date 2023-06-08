@@ -36,6 +36,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   uuid: ^3.0.7
+  google_fonts: ^3.0.1
+  http: ^0.13.6
+  http_interceptor: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -86,6 +89,54 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: Bitter
+      fonts:
+        - asset: fonts/Bitter-Black.ttf
+          weight: 900
+        - asset: fonts/Bitter-BlackItalic.ttf
+          weight: 900
+        - asset: fonts/Bitter-Bold.ttf
+          weight: 700
+        - asset: fonts/Bitter-BoldItalic.ttf
+          weight: 700
+        - asset: fonts/Bitter-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/Bitter-ExtraBoldItalic.ttf
+          weight: 800
+        - asset: fonts/Bitter-ExtraLight.ttf
+          weight: 200
+        - asset: fonts/Bitter-ExtraLightItalic.ttf
+          weight: 200
+        - asset: fonts/Bitter-Italic.ttf
+          weight: 100
+        - asset: fonts/Bitter-Light.ttf
+          weight: 300
+        - asset: fonts/Bitter-LightItalic.ttf
+          weight: 300
+        - asset: fonts/Bitter-Medium.ttf
+          weight: 500
+        - asset: fonts/Bitter-MediumItalic.ttf
+          weight: 500
+        - asset: fonts/Bitter-Regular.ttf
+          weight: 400
+        - asset: fonts/Bitter-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Bitter-SemiBoldItalic.ttf
+          weight: 600
+        - asset: fonts/Bitter-Thin.ttf
+          weight: 100
+        - asset: fonts/Bitter-ThinItalic.ttf
+          weight: 100
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  # 
+  # json-server Comandos:
+  # - Instalacao: npm install -g json-server
+  # - json-server --watch --host SEU_IP_AQUI db.json
+  # 
+  # Comando para exibir o ip do pc: ipconfig 
+  # 
+  # No PowerShell: Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+  
