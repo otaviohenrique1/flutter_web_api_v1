@@ -8,6 +8,7 @@ void main() {
 
   JournalService service = JournalService();
   service.register("Ola mundo");
+  // service.get();
 }
 
 class App extends StatelessWidget {
