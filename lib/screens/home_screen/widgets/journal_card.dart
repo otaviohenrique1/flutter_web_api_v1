@@ -79,7 +79,9 @@ class JournalCard extends StatelessWidget {
       );
     } else {
       return InkWell(
-        onTap: () {},
+        onTap: () {
+          callAddJoiurnalScreen(context);
+        },
         child: Container(
           height: 115,
           alignment: Alignment.center,
@@ -91,5 +93,10 @@ class JournalCard extends StatelessWidget {
         ),
       );
     }
+  }
+
+  callAddJoiurnalScreen(BuildContext context) {
+    print("Funcionou");
+    Navigator.pushNamed(context, "add-journal");
   }
 }
