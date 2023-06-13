@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_api_v1/helpers/weekday.dart';
 import 'package:flutter_web_api_v1/models/journal.dart';
+import 'package:uuid/uuid.dart';
 
 class JournalCard extends StatelessWidget {
   final Journal? journal;
@@ -96,7 +97,15 @@ class JournalCard extends StatelessWidget {
   }
 
   callAddJoiurnalScreen(BuildContext context) {
-    print("Funcionou");
-    Navigator.pushNamed(context, "add-journal");
+    Navigator.pushNamed(
+      context,
+      "add-journal",
+      arguments: Journal(
+        id: const Uuid().v1(),
+        content: "",
+        createdAt: showedDate,
+        updatedAt: showedDate,
+      ),
+    );
   }
 }

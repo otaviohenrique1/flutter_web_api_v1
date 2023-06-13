@@ -135,7 +135,7 @@ flutter:
   # 
   # json-server Comandos:
   # - Instalacao: npm install -g json-server
-  # - json-server --watch --host SEU_IP_AQUI db.json
+  # - json-server --watch --host SEU_IP_AQUI server/db.json
   # 
   # Comando para exibir o ip do pc: ipconfig 
   # 
