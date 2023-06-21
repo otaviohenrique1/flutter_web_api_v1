@@ -60,6 +60,7 @@ class App extends StatelessWidget {
             return AddJournalScreen(journal: journal);
           });
         }
+        return null;
       },
     );
   }

@@ -16,8 +16,7 @@ class AddJournalScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            "${WeekDay(journal.createdAt.weekday).long.toLowerCase()}, ${journal.createdAt.day} | ${journal.createdAt.month} | ${journal.createdAt.year}"),
+        title: Text(WeekDay(journal.createdAt).toString()),
         actions: [
           IconButton(
             onPressed: () {
@@ -41,6 +40,16 @@ class AddJournalScreen extends StatelessWidget {
     );
   }
 
+  void registerJournal(BuildContext context) {
+    String content = _contentController.text;
+    journal.content = content;
+    JournalService service = JournalService();
+    service.register(journal).then((value) {
+      Navigator.pop(context, value);
+    });
+  }
+
+  /*
   void registerJournal(BuildContext context) async {
     String content = _contentController.text;
     journal.content = content;
@@ -48,4 +57,5 @@ class AddJournalScreen extends StatelessWidget {
     bool result = await service.register(journal);
     Navigator.pop(context, result);
   }
+  */
 }
