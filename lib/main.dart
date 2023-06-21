@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_api_v1/models/journal.dart';
 import 'package:flutter_web_api_v1/screens/add_journal_screen/add_journal_screen.dart';
 import 'package:flutter_web_api_v1/screens/home_screen/home_screen.dart';
-// import 'package:flutter_web_api_v1/services/async_study.dart';
+import 'package:flutter_web_api_v1/services/async_study.dart';
 import 'package:flutter_web_api_v1/services/journal_service.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -11,8 +11,9 @@ void main() {
 
   JournalService service = JournalService();
   // service.register("Ola mundo");
+  service.register(Journal.empty());
   // service.get();
-  // asyncStudy();
+  asyncStudy();
 }
 
 class App extends StatelessWidget {

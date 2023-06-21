@@ -22,8 +22,12 @@ class JournalService {
 
   Future<bool> register(Journal journal) async {
     String jsonJournal = json.encode(journal.toMap());
-    http.Response response =
-        await client.post(Uri.parse(getUrl()), body: jsonJournal);
+    http.Response response = await client.post(
+      Uri.parse(getUrl()),
+      headers: {'Content-type': 'application/json'},
+      body: jsonJournal,
+    );
+
     if (response.statusCode == 201) {
       return true;
     }
