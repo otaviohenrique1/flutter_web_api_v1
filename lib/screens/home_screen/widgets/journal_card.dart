@@ -107,9 +107,13 @@ class JournalCard extends StatelessWidget {
         updatedAt: showedDate,
       ),
     ).then((value) {
-      if (value != null && value == true) {
+      if (value == true) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text("Registro feito com sucesso!"),
+        ));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text("Houve uma falha ao registrar."),
         ));
       }
     });
