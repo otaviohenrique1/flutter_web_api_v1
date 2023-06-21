@@ -51,6 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         controller: _listScrollController,
         children: generateListJournalCards(
+          refreshFunction: refresh,
           windowPage: windowPage,
           currentDay: currentDay,
           database: database,
